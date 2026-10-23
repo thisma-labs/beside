@@ -4,7 +4,7 @@ All notable changes to the Beside application will be documented in this file.
 
 ---
 
-## [v0.1.0] - 2026-10-23
+## [0.1.0] - 2026-10-23
 
 ### Initial Release
 - **Core Engine (`beside-core`)**:
