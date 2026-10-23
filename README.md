@@ -1,12 +1,22 @@
-# Beside (`•—◎`)
-> **Fast. Private. Together. — Send it. It's there.**  
-> *Engineered by [Thisma Labs](https://github.com/thisma-labs)*
+<p align="center">
+  <img src="assets/beside-icon.png" alt="Beside App Logo" width="120" height="120"/>
+</p>
 
-[![Release](https://img.shields.io/badge/release-v0.1.0-emerald?style=flat-square)](https://github.com/thisma-labs/beside/releases)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-blue?style=flat-square&logo=windows)](https://github.com/thisma-labs/beside/releases)
-[![Android](https://img.shields.io/badge/Android-8.0%2B%20(arm64)-green?style=flat-square&logo=android)](https://github.com/thisma-labs/beside/releases)
-[![Security](https://img.shields.io/badge/Security-Mutual%20TLS%201.3-success?style=flat-square)](SECURITY.md)
-[![License](https://img.shields.io/badge/License-Freemium%20%2F%20Proprietary-lightgrey?style=flat-square)](LICENSE)
+<h1 align="center">Beside</h1>
+
+<p align="center">
+  <strong>Direct local file, folder &amp; text sharing between Windows and Android over Wi-Fi.</strong><br>
+  <em>Fast. Private. Together. — Send it. It's there.</em><br>
+  <sub>Engineered by <a href="https://github.com/thisma-labs">Thisma Labs</a></sub>
+</p>
+
+<p align="center">
+  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.1.0-emerald?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-blue?style=flat-square&logo=windows" alt="Windows"></a>
+  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Android-8.0%2B%20(arm64)-green?style=flat-square&logo=android" alt="Android"></a>
+  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Mutual%20TLS%201.3-success?style=flat-square" alt="Security"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Freemium%20%2F%20Proprietary-lightgrey?style=flat-square" alt="License"></a>
+</p>
 
 <p align="center">
   <img src="assets/beside-hero.png" alt="Beside — Wire-Speed Local Peer Sharing by Thisma Labs" width="850"/>
