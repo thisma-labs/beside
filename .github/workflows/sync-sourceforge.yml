@@ -1,0 +1,37 @@
+name: Sync Release to SourceForge
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload-to-sourceforge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Release Assets
+        uses: robinraju/release-downloader@v1.9
+        with:
+          tag: ${{ github.event.release.tag_name }}
+          fileName: "*"
+          out-file-path: "./release-artifacts"
+
+      - name: Setup SSH Key
+        if: env.SF_KEY != ''
+        env:
+          SF_KEY: ${{ secrets.SOURCEFORGE_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SF_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H frs.sourceforge.net >> ~/.ssh/known_hosts
+
+      - name: Rsync Artifacts to SourceForge FRS
+        if: env.SF_USER != '' && env.SF_KEY != ''
+        env:
+          SF_USER: ${{ secrets.SOURCEFORGE_USERNAME }}
+          SF_KEY: ${{ secrets.SOURCEFORGE_SSH_KEY }}
+          VERSION: ${{ github.event.release.tag_name }}
+        run: |
+          # Create version directory on SourceForge and upload files
+          ssh ${SF_USER}@frs.sourceforge.net "mkdir -p /home/frs/project/beside-app/${VERSION}"
+          rsync -avP -e ssh ./release-artifacts/ ${SF_USER}@frs.sourceforge.net:/home/frs/project/beside-app/${VERSION}/
