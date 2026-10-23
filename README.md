@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/beside-icon.png" alt="Beside App Logo" width="120" height="120"/>
+  <img src="assets/logo.svg" alt="Beside Logo" width="96" height="96"/>
 </p>
 
 <h1 align="center">Beside</h1>
