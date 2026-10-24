@@ -1,3 +1,5 @@
+<!-- GENERATED FROM release.json, DO NOT EDIT. -->
+
 <p align="center">
   <img src="assets/logo.svg" alt="Beside Logo" width="96" height="96"/>
 </p>
@@ -86,16 +88,16 @@ Always verify the integrity of downloaded binaries before executing:
 ### Windows (PowerShell)
 ```powershell
 Get-FileHash -Algorithm SHA256 Beside-Setup-v0.1.0-x64.exe
-# Expected: 7542762b59bd2eb3fbf0db14f80cb6a6f886c4339213cf5ab1d1ab2555ac5632
+# Expected: ca5194c5923e7b2cbd4939d61195c2c9488e46a83a37a983fe0ae187754ac29c
 
 Get-FileHash -Algorithm SHA256 Beside-v0.1.0-Windows-x64.zip
-# Expected: f8c55cfde6dc83b24c9b8c747c6577eb3f9266b7138f08b4d3efd6046f61446a
+# Expected: 2344e158997fe31788af0903c58a7b7ad6d6de05117d150fac96f88728ff861d
 ```
 
 ### Android (Linux / macOS / Termux)
 ```bash
 sha256sum Beside-v0.1.0-Android-arm64.apk
-# Expected: e88e5a7465c8d6a95a9d4c5dada18224f98dba6d7ba7db6edd16023e1df98ccd
+# Expected: 3138b55a6bab78fde0fae171afce5009d1d9587b7362b33a177679153fb507b4
 ```
 
 ---
