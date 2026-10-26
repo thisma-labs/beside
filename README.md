@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.1.0-emerald?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.1.1-emerald?style=flat-square" alt="Release"></a>
   <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-blue?style=flat-square&logo=windows" alt="Windows"></a>
   <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Android-8.0%2B%20(arm64)-green?style=flat-square&logo=android" alt="Android"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Mutual%20TLS%201.3-success?style=flat-square" alt="Security"></a>
@@ -34,22 +34,22 @@ Transfers stay strictly inside your local Wi-Fi network at wire speed. No cloud 
 
 - **Wire-Speed Gigabit LAN**: Direct peer-to-peer transfers over local Wi-Fi, mobile hotspot, or USB tethering without passing through the internet.
 - **Mutual TLS 1.3 Only**: Every transfer is encrypted end-to-end with TLS 1.3 and pinned X.509 SPKI SHA-256 device key fingerprints (`rustls` + `ring`).
-- **8-Digit SAS MITM Defense**: Visual SAS pairing derived from RFC 8446 / RFC 5705 TLS Exporter (`EXPORTER-beside-pairing-sas-v1`) to prevent interception on public Wi-Fi.
+- **8-Digit SAS MITM Defense**: Visual SAS pairing derived from RFC 8446 / RFC 5705 TLS Exporter (`EXPORTER-beside-pairing-v1`) to prevent interception on public Wi-Fi.
 - **Hardware Keystore Protection**: Private keys are encrypted at rest via **Windows DPAPI** and **Android Keystore AES-256-GCM**.
 - **Bounded 64 KB RAM Streaming**: Stream multi-gigabyte video or archive files with a flat memory footprint, streamed SHA-256 integrity checks, and atomic `.part` promotion.
 - **Zero-Config Local Discovery**: Automatic `_beside._tcp.local.` discovery with QR code and manual IP:port fallback.
 
 ---
 
-## 📥 Downloads (`v0.1.0`)
+## 📥 Downloads (`v0.1.1`)
 
 | Platform | Package | Format | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.0 MB) | [**Download Beside-Setup-v0.1.0-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.1.0/Beside-Setup-v0.1.0-x64.exe) |
-| **Windows 10 / 11** | Portable Archive | `.zip` (14.1 MB) | [**Download Beside-v0.1.0-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.1.0/Beside-v0.1.0-Windows-x64.zip) |
-| **Android 8.0+** | Signed Release APK | `.apk` (22.5 MB) | [**Download Beside-v0.1.0-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.1.0/Beside-v0.1.0-Android-arm64.apk) |
+| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.0 MB) | [**Download Beside-Setup-v0.1.1-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.1.1/Beside-Setup-v0.1.1-x64.exe) |
+| **Windows 10 / 11** | Portable Archive | `.zip` (14.3 MB) | [**Download Beside-v0.1.1-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.1.1/Beside-v0.1.1-Windows-x64.zip) |
+| **Android 8.0+** | Signed Release APK | `.apk` (32.5 MB) | [**Download Beside-v0.1.1-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.1.1/Beside-v0.1.1-Android-arm64.apk) |
 
-> Checksums and cryptographic signatures are published with every release in [`SHA256SUMS.txt`](https://github.com/thisma-labs/beside/releases/download/v0.1.0/SHA256SUMS.txt).  
+> Checksums and cryptographic signatures are published with every release in [`SHA256SUMS.txt`](https://github.com/thisma-labs/beside/releases/download/v0.1.1/SHA256SUMS.txt).  
 > Mirrors also available on [**SourceForge**](https://sourceforge.net/projects/beside-app/).
 
 ---
@@ -76,8 +76,12 @@ Beside is freemium software. Beside Free is completely functional for everyday q
 | **Receiving from Pro Users** | **Unlimited** | **Unlimited** |
 
 ### Where to Buy Beside Pro ($14.99 Lifetime):
-- [**Gumroad**](https://thismalabs.gumroad.com/l/beside-pro) (Credit Card, Apple Pay, PayPal)
-- [**itch.io**](https://thisma-labs.itch.io/beside) (Indie Storefront)
+- [**Gumroad**](https://thismalabs.gumroad.com/l/beside-pro) (Official Authorized Merchant — Credit Card, Apple Pay, PayPal)
+
+### Free Community Downloads & Mirrors:
+- [**GitHub Releases**](https://github.com/thisma-labs/beside/releases)
+- [**SourceForge**](https://sourceforge.net/projects/beside-app/)
+- [**itch.io**](https://thisma-labs.itch.io/beside) (Community Free Edition / Optional Donation)
 
 ---
 
@@ -87,16 +91,16 @@ Always verify the integrity of downloaded binaries before executing:
 
 ### Windows (PowerShell)
 ```powershell
-Get-FileHash -Algorithm SHA256 Beside-Setup-v0.1.0-x64.exe
+Get-FileHash -Algorithm SHA256 Beside-Setup-v0.1.1-x64.exe
 # Expected: ca5194c5923e7b2cbd4939d61195c2c9488e46a83a37a983fe0ae187754ac29c
 
-Get-FileHash -Algorithm SHA256 Beside-v0.1.0-Windows-x64.zip
+Get-FileHash -Algorithm SHA256 Beside-v0.1.1-Windows-x64.zip
 # Expected: 2344e158997fe31788af0903c58a7b7ad6d6de05117d150fac96f88728ff861d
 ```
 
 ### Android (Linux / macOS / Termux)
 ```bash
-sha256sum Beside-v0.1.0-Android-arm64.apk
+sha256sum Beside-v0.1.1-Android-arm64.apk
 # Expected: 3138b55a6bab78fde0fae171afce5009d1d9587b7362b33a177679153fb507b4
 ```
 

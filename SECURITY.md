@@ -15,7 +15,7 @@ Beside is designed from the ground up for strict local-network privacy and crypt
 
 ### 2. 8-Digit Short Authentication String (SAS)
 - Pairing derives an 8-digit verification code using the **RFC 8446 / RFC 5705 TLS Keying Material Exporter**:
-  - Context: `EXPORTER-beside-pairing-sas-v1`
+  - Context: `EXPORTER-beside-pairing-v1`
   - Eliminates modulo bias by sampling a 64-bit integer exporter output.
   - Enforces a 60-second single-attempt pairing window with commitment exchanges to prevent Man-in-the-Middle (MITM) attacks on untrusted Wi-Fi networks.
 
@@ -40,9 +40,9 @@ Beside is designed from the ground up for strict local-network privacy and crypt
 Every official Beside binary is hashed before distribution. Checksums are published in `SHA256SUMS.txt`:
 
 ```text
-ca5194c5923e7b2cbd4939d61195c2c9488e46a83a37a983fe0ae187754ac29c  Beside-Setup-v0.1.0-x64.exe
-2344e158997fe31788af0903c58a7b7ad6d6de05117d150fac96f88728ff861d  Beside-v0.1.0-Windows-x64.zip
-3138b55a6bab78fde0fae171afce5009d1d9587b7362b33a177679153fb507b4  Beside-v0.1.0-Android-arm64.apk
+3138b55a6bab78fde0fae171afce5009d1d9587b7362b33a177679153fb507b4  Beside-v0.1.1-Android-arm64.apk
+2344e158997fe31788af0903c58a7b7ad6d6de05117d150fac96f88728ff861d  Beside-v0.1.1-Windows-x64.zip
+ca5194c5923e7b2cbd4939d61195c2c9488e46a83a37a983fe0ae187754ac29c  Beside-Setup-v0.1.1-x64.exe
 ```
 
 ---

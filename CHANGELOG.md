@@ -5,6 +5,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [0.1.1] - 2026-10-26
+
+### Added
+- **On-Demand License Status Verification**: Added "Check Status" action in Settings and Pro Upgrade sheets to query `/api/v1/validate` on demand and instantly synchronize remote slot deactivations while preserving the 14-day offline grace period.
+- **Automated Uninstaller Deactivation Hook**: Inno Setup Windows uninstaller cleanly notifies license server on uninstall to free device slot.
+- **Automated SourceForge Release Mirroring**: Added `.github/workflows/sync-sourceforge.yml` workflow for automated asset mirroring and SHA-256 verification.
+- **Enhanced Activation Error Guidance**: Actionable modal and inline notifications for license activation errors with direct link to the self-service Device Manager portal.
+
+### Changed
+- **Commercial Price Standardization**: Standardized Beside Pro lifetime license price to $14.99 USD across in-app purchase sheets, web templates, and storefronts.
+- **Distribution Roles Harmonization**: Designated Gumroad as the sole authorized merchant for Beside Pro lifetime licenses; itch.io and SourceForge configured as $0 free community download mirrors.
+- **TLS Exporter Label Parity**: Unified RFC 8446 / RFC 5705 TLS Key Exporter label across protocol documentation, web security disclosures, and client/core implementations (`EXPORTER-beside-pairing-v1`).
+- **Direct SourceForge FRS Redirection**: Web worker `/download/sourceforge` now redirects directly to SourceForge File Release System latest download endpoint.
+
+### Fixed
+- Fixed Inno Setup Pascal Script type mismatch during Windows setup packaging.
+- Resolved static analysis warnings in desktop UI and active device test suites.
+
+---
+
 ## [0.1.0] - 2026-10-24
 
 ### Initial Stable Release
@@ -19,7 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 #### Security & Cryptography
 - **Strict Mutual TLS 1.3**: Built with Rust (`tokio-rustls` + `ring`), using self-signed Ed25519 device certificates and pinned SHA-256 Subject Public Key Info (SPKI) fingerprints. Legacy TLS versions and insecure ciphers are strictly rejected.
-- **8-Digit SAS MITM Defense**: Visual Short Authentication String derived from RFC 8446 / RFC 5705 TLS Exporters (`EXPORTER-beside-pairing-sas-v1`) with single-attempt 60-second pairing windows to eliminate Man-in-the-Middle attacks on public networks.
+- **8-Digit SAS MITM Defense**: Visual Short Authentication String derived from RFC 8446 / RFC 5705 TLS Exporters (`EXPORTER-beside-pairing-v1`) with single-attempt 60-second pairing windows to eliminate Man-in-the-Middle attacks on public networks.
 - **Hardware-Protected Storage at Rest**: Device identity keys encrypted via Windows DPAPI on Windows and hardware-backed Android Keystore AES-256-GCM on Android.
 - **Path Sanitization**: Rejection of path traversal (`..`), null bytes, absolute paths, and Windows reserved device names (`CON`, `PRN`, `AUX`, `NUL`, etc.).
 - **Real Available Space Verification**: Pre-checks available disk capacity prior to accepting incoming transfers.
