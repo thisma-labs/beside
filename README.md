@@ -1,5 +1,3 @@
-<!-- GENERATED FROM release.json, DO NOT EDIT. -->
-
 <p align="center">
   <img src="assets/logo.png" alt="Beside Logo" width="96" height="96"/>
 </p>
@@ -13,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.1.1-emerald?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.2.0-emerald?style=flat-square" alt="Release"></a>
   <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-blue?style=flat-square&logo=windows" alt="Windows"></a>
   <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Android-8.0%2B%20(arm64)-green?style=flat-square&logo=android" alt="Android"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Mutual%20TLS%201.3-success?style=flat-square" alt="Security"></a>
@@ -30,6 +28,17 @@ Transfers stay strictly inside your local Wi-Fi network at wire speed. No cloud 
 
 ---
 
+## 📌 Dedicated Support Repositories
+
+Starting with release **v0.2.0**, issues, updates, and help documentation are maintained in platform-specific repositories:
+
+- **Windows Desktop Support**: [`thisma-labs/beside-windows-support`](https://github.com/thisma-labs/beside-windows-support)  
+  *Live Portal: [https://thisma-labs.github.io/beside-windows-support](https://thisma-labs.github.io/beside-windows-support)* | *SourceForge: [beside-windows](https://sourceforge.net/projects/beside-windows/)*
+- **Android Mobile Support**: [`thisma-labs/beside-android-support`](https://github.com/thisma-labs/beside-android-support)  
+  *Live Portal: [https://thisma-labs.github.io/beside-android-support](https://thisma-labs.github.io/beside-android-support)* | *SourceForge: [beside-android](https://sourceforge.net/projects/beside-android/)*
+
+---
+
 ## ⚡ Key Highlights
 
 - **Wire-Speed Gigabit LAN**: Direct peer-to-peer transfers over local Wi-Fi, mobile hotspot, or USB tethering without passing through the internet.
@@ -41,16 +50,16 @@ Transfers stay strictly inside your local Wi-Fi network at wire speed. No cloud 
 
 ---
 
-## 📥 Downloads (`v0.1.1`)
+## 📥 Downloads (`v0.2.0`)
 
 | Platform | Package | Format | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.0 MB) | [**Download Beside-Setup-v0.1.1-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.1.1/Beside-Setup-v0.1.1-x64.exe) |
-| **Windows 10 / 11** | Portable Archive | `.zip` (14.3 MB) | [**Download Beside-v0.1.1-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.1.1/Beside-v0.1.1-Windows-x64.zip) |
-| **Android 8.0+** | Signed Release APK | `.apk` (32.5 MB) | [**Download Beside-v0.1.1-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.1.1/Beside-v0.1.1-Android-arm64.apk) |
+| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.25 MB) | [**Download Beside-Setup-v0.2.0-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.2.0/Beside-Setup-v0.2.0-x64.exe) |
+| **Windows 10 / 11** | Portable Archive | `.zip` (14.57 MB) | [**Download Beside-v0.2.0-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.2.0/Beside-v0.2.0-Windows-x64.zip) |
+| **Android 8.0+** | Signed Release APK | `.apk` (33.30 MB) | [**Download Beside-v0.2.0-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.2.0/Beside-v0.2.0-Android-arm64.apk) |
 
-> Checksums and cryptographic signatures are published with every release in [`SHA256SUMS.txt`](https://github.com/thisma-labs/beside/releases/download/v0.1.1/SHA256SUMS.txt).  
-> Mirrors also available on [**SourceForge**](https://sourceforge.net/projects/beside-app/).
+> Checksums and cryptographic signatures are published with every release in [`SHA256SUMS.txt`](SHA256SUMS.txt).  
+> Mirrors also available on **SourceForge**: [Beside for Windows](https://sourceforge.net/projects/beside-windows/) and [Beside for Android](https://sourceforge.net/projects/beside-android/).
 
 ---
 
@@ -80,7 +89,8 @@ Beside is freemium software. Beside Free is completely functional for everyday q
 
 ### Free Community Downloads & Mirrors:
 - [**GitHub Releases**](https://github.com/thisma-labs/beside/releases)
-- [**SourceForge**](https://sourceforge.net/projects/beside-app/)
+- [**SourceForge Windows**](https://sourceforge.net/projects/beside-windows/)
+- [**SourceForge Android**](https://sourceforge.net/projects/beside-android/)
 - [**itch.io**](https://thisma-labs.itch.io/beside) (Community Free Edition / Optional Donation)
 
 ---
@@ -91,17 +101,17 @@ Always verify the integrity of downloaded binaries before executing:
 
 ### Windows (PowerShell)
 ```powershell
-Get-FileHash -Algorithm SHA256 Beside-Setup-v0.1.1-x64.exe
-# Expected: ca5194c5923e7b2cbd4939d61195c2c9488e46a83a37a983fe0ae187754ac29c
+Get-FileHash -Algorithm SHA256 Beside-Setup-v0.2.0-x64.exe
+# Expected: 1f2f28b7e404519de9e5b836940315be26306a8b6f3c222762a6d67dc753ff8e
 
-Get-FileHash -Algorithm SHA256 Beside-v0.1.1-Windows-x64.zip
-# Expected: 2344e158997fe31788af0903c58a7b7ad6d6de05117d150fac96f88728ff861d
+Get-FileHash -Algorithm SHA256 Beside-v0.2.0-Windows-x64.zip
+# Expected: bca3db28d780790797a4123f157bca3587243c6f581a1388b24975ab6cb467d9
 ```
 
 ### Android (Linux / macOS / Termux)
 ```bash
-sha256sum Beside-v0.1.1-Android-arm64.apk
-# Expected: 3138b55a6bab78fde0fae171afce5009d1d9587b7362b33a177679153fb507b4
+sha256sum Beside-v0.2.0-Android-arm64.apk
+# Expected: 8867cc2d82309f42cfdad3b1779114dd64b1be5bac59e8549a0d163199858c06
 ```
 
 ---

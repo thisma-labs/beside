@@ -5,6 +5,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+## [0.2.0] - 2026-11-07
+
+### Added
+- **Dedicated Platform Support Structure**: Split issue tracking and release feeds into two dedicated repositories: `beside-windows-support` and `beside-android-support`.
+- **Refreshed Dual-Platform User Interfaces**:
+  - **Windows Desktop**: 3-column widescreen layout with interactive Concentric Radar peer scanning, drag-and-drop file dropzone, and active transfer docks.
+  - **Android Mobile**: Ergonomic 4-tab bottom navigation (Home, Activity, Trusted Devices, Settings) optimized for one-handed operation.
+- **Adaptive Light & Dark Themes**: Comprehensive high-contrast theme engine supporting Obsidian Dark, Clean Light, and System follow modes.
+- **Direct LAN Text Messaging**: Low-latency snippet, URL, and clipboard text sharing directly across local Wi-Fi peers with one-tap copy.
+- **Interactive WinRT Toasts & Shell Integration**: Actionable Windows notifications (`Accept`, `Decline`, `Open Folder`), explorer right-click context menu ("Send with Beside"), and system tray minimization.
+- **Android MediaStore & Storage Access Framework**: Automatic photo/video indexing upon arrival and configurable download paths (internal storage and external SD cards).
+- **Background Transfer WakeLocks**: Persistent foreground service preventing mobile OS task killer interruptions during large batch transfers.
+- **Automated SourceForge 16:9 Presentation Cards**: Pre-rendered 1920x1080 showcase graphics and 512x512 project icons for both platform listings.
+
+### Security
+- **Strict Mutual TLS 1.3**: Pinned X.509 SPKI SHA-256 device public key certificates with `rustls` and `ring`.
+- **8-Digit SAS Verification**: Derived from RFC 8446 / RFC 5705 TLS Exporter (`EXPORTER-beside-pairing-v1`) to prevent Man-in-the-Middle attacks.
+- **Hardware-Protected Storage at Rest**: Device identity keys encrypted via Windows DPAPI and Android Keystore AES-256-GCM.
+- **Bounded 64 KB Memory Buffers**: Safe streaming of multi-gigabyte files with flat RAM footprint and atomic temporary `.part` file promotion.
+
+### Distribution
+- **Windows Setup Installer**: `Beside-Setup-v0.2.0-x64.exe` (12.25 MB, SHA-256: `1f2f28b7e404519de9e5b836940315be26306a8b6f3c222762a6d67dc753ff8e`)
+- **Windows Portable ZIP**: `Beside-v0.2.0-Windows-x64.zip` (14.57 MB, SHA-256: `bca3db28d780790797a4123f157bca3587243c6f581a1388b24975ab6cb467d9`)
+- **Android Release APK**: `Beside-v0.2.0-Android-arm64.apk` (33.30 MB, SHA-256: `8867cc2d82309f42cfdad3b1779114dd64b1be5bac59e8549a0d163199858c06`)
+
+---
+
 ## [0.1.1] - 2026-10-26
 
 ### Added
