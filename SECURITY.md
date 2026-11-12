@@ -40,9 +40,9 @@ Beside is designed from the ground up for strict local-network privacy and crypt
 Every official Beside binary is hashed before distribution. Checksums are published in `SHA256SUMS.txt`:
 
 ```text
-cc8646d4fb618f429743e3006d8f7abb03141e036faad87840e62815b98ab685  Beside-Setup-v0.3.0-x64.exe
-a0d0fd7fd6af7517246e1c34bc1d20fb34705bf38d05b2057cb074ed6df50727  Beside-v0.3.0-Windows-x64.zip
-c4caf733ec9f407ab45e79b3aa34d5ad524471b93ed4c1654fb6c49725dbeae8  Beside-v0.3.0-Android-arm64.apk
+d18dddf7ecea4cb5807ca3c573fa46020ea080e665a3570547bec797c8f2bc71  Beside-Setup-v0.3.0-x64.exe
+a5a641f47ffb67d635cfad001f1a51dbb42b2110122d57dad17e989cb31c1c01  Beside-v0.3.0-Windows-x64.zip
+4c8f371fe51afdaca3ad43b36ddbf1f58095ca083e2efe1fb269853b81fd0d84  Beside-v0.3.0-Android-arm64.apk
 ```
 
 ---

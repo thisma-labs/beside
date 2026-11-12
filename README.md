@@ -54,9 +54,9 @@ Starting with release **v0.2.0** and continuing in **v0.3.0**, issues, updates, 
 
 | Platform | Package | Format | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.40 MB) | [**Download Beside-Setup-v0.3.0-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-Setup-v0.3.0-x64.exe) |
-| **Windows 10 / 11** | Portable Archive | `.zip` (14.81 MB) | [**Download Beside-v0.3.0-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-v0.3.0-Windows-x64.zip) |
-| **Android 8.0+** | Signed Release APK | `.apk` (27.78 MB) | [**Download Beside-v0.3.0-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-v0.3.0-Android-arm64.apk) |
+| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.42 MB) | [**Download Beside-Setup-v0.3.0-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-Setup-v0.3.0-x64.exe) |
+| **Windows 10 / 11** | Portable Archive | `.zip` (14.84 MB) | [**Download Beside-v0.3.0-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-v0.3.0-Windows-x64.zip) |
+| **Android 8.0+** | Signed Release APK | `.apk` (27.91 MB) | [**Download Beside-v0.3.0-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-v0.3.0-Android-arm64.apk) |
 
 > Checksums and cryptographic signatures are published with every release in [`SHA256SUMS.txt`](SHA256SUMS.txt).  
 > Mirrors also available on **SourceForge**: [Beside for Windows](https://sourceforge.net/projects/beside-windows/) and [Beside for Android](https://sourceforge.net/projects/beside-android/).
