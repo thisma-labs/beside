@@ -42,15 +42,15 @@ Transfers travel machine-to-machine strictly over your local Wi-Fi network at fu
 ### Windows 10 / 11 (64-bit x64)
 | Package | File Name | Size | SHA-256 Digest |
 | :--- | :--- | :--- | :--- |
-| **Inno Setup Installer** | `Beside-Setup-v0.3.0-x64.exe` | 12.40 MB | `cc8646d4fb618f429743e3006d8f7abb03141e036faad87840e62815b98ab685` |
-| **Portable Archive** | `Beside-v0.3.0-Windows-x64.zip` | 14.81 MB | `a0d0fd7fd6af7517246e1c34bc1d20fb34705bf38d05b2057cb074ed6df50727` |
+| **Inno Setup Installer** | `Beside-Setup-v0.3.0-x64.exe` | 12.42 MB | `d18dddf7ecea4cb5807ca3c573fa46020ea080e665a3570547bec797c8f2bc71` |
+| **Portable Archive** | `Beside-v0.3.0-Windows-x64.zip` | 14.84 MB | `a5a641f47ffb67d635cfad001f1a51dbb42b2110122d57dad17e989cb31c1c01` |
 
 - SourceForge Mirror: [https://sourceforge.net/projects/beside-windows](https://sourceforge.net/projects/beside-windows)
 
 ### Android 8.0+ (arm64-v8a)
 | Package | File Name | Size | SHA-256 Digest |
 | :--- | :--- | :--- | :--- |
-| **Signed Release APK** | `Beside-v0.3.0-Android-arm64.apk` | 27.78 MB | `c4caf733ec9f407ab45e79b3aa34d5ad524471b93ed4c1654fb6c49725dbeae8` |
+| **Signed Release APK** | `Beside-v0.3.0-Android-arm64.apk` | 27.91 MB | `4c8f371fe51afdaca3ad43b36ddbf1f58095ca083e2efe1fb269853b81fd0d84` |
 
 - SourceForge Mirror: [https://sourceforge.net/projects/beside-android](https://sourceforge.net/projects/beside-android)
 
