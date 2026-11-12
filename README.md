@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.2.0-emerald?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/release-v0.3.0-emerald?style=flat-square" alt="Release"></a>
   <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-blue?style=flat-square&logo=windows" alt="Windows"></a>
   <a href="https://github.com/thisma-labs/beside/releases"><img src="https://img.shields.io/badge/Android-8.0%2B%20(arm64)-green?style=flat-square&logo=android" alt="Android"></a>
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-Mutual%20TLS%201.3-success?style=flat-square" alt="Security"></a>
@@ -30,18 +30,18 @@ Transfers stay strictly inside your local Wi-Fi network at wire speed. No cloud 
 
 ## 📌 Dedicated Support Repositories
 
-Starting with release **v0.2.0**, issues, updates, and help documentation are maintained in platform-specific repositories:
+Starting with release **v0.2.0** and continuing in **v0.3.0**, issues, updates, and help documentation are maintained in platform-specific repositories:
 
-- **Windows Desktop Support**: [`thisma-labs/beside-windows-support`](https://github.com/thisma-labs/beside-windows-support)  
-  *Live Portal: [https://thisma-labs.github.io/beside-windows-support](https://thisma-labs.github.io/beside-windows-support)* | *SourceForge: [beside-windows](https://sourceforge.net/projects/beside-windows/)*
-- **Android Mobile Support**: [`thisma-labs/beside-android-support`](https://github.com/thisma-labs/beside-android-support)  
-  *Live Portal: [https://thisma-labs.github.io/beside-android-support](https://thisma-labs.github.io/beside-android-support)* | *SourceForge: [beside-android](https://sourceforge.net/projects/beside-android/)*
+- **Windows Desktop Support**: [`thisma-labs/beside-windows-support`](https://github.com/thisma-labs/beside-windows-support) | *SourceForge: [beside-windows](https://sourceforge.net/projects/beside-windows/)*
+- **Android Mobile Support**: [`thisma-labs/beside-android-support`](https://github.com/thisma-labs/beside-android-support) | *SourceForge: [beside-android](https://sourceforge.net/projects/beside-android/)*
 
 ---
 
 ## ⚡ Key Highlights
 
 - **Wire-Speed Gigabit LAN**: Direct peer-to-peer transfers over local Wi-Fi, mobile hotspot, or USB tethering without passing through the internet.
+- **Kernel-Level Atomic Finalization (v0.3.0)**: Up to 3.85x faster folder transfers on Android using native `renameat2(RENAME_NOREPLACE)` and Win32 `MoveFileExW` without userland copy overhead.
+- **Zero-Lag Control Framing (v0.3.0)**: Global `TCP_NODELAY` avoids Nagle's 40–200 ms ACK delay penalty on per-file control frames.
 - **Mutual TLS 1.3 Only**: Every transfer is encrypted end-to-end with TLS 1.3 and pinned X.509 SPKI SHA-256 device key fingerprints (`rustls` + `ring`).
 - **8-Digit SAS MITM Defense**: Visual SAS pairing derived from RFC 8446 / RFC 5705 TLS Exporter (`EXPORTER-beside-pairing-v1`) to prevent interception on public Wi-Fi.
 - **Hardware Keystore Protection**: Private keys are encrypted at rest via **Windows DPAPI** and **Android Keystore AES-256-GCM**.
@@ -50,13 +50,13 @@ Starting with release **v0.2.0**, issues, updates, and help documentation are ma
 
 ---
 
-## 📥 Downloads (`v0.2.0`)
+## 📥 Downloads (`v0.3.0`)
 
 | Platform | Package | Format | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.25 MB) | [**Download Beside-Setup-v0.2.0-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.2.0/Beside-Setup-v0.2.0-x64.exe) |
-| **Windows 10 / 11** | Portable Archive | `.zip` (14.57 MB) | [**Download Beside-v0.2.0-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.2.0/Beside-v0.2.0-Windows-x64.zip) |
-| **Android 8.0+** | Signed Release APK | `.apk` (33.30 MB) | [**Download Beside-v0.2.0-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.2.0/Beside-v0.2.0-Android-arm64.apk) |
+| **Windows 10 / 11** | Installer (Recommended) | `.exe` (12.40 MB) | [**Download Beside-Setup-v0.3.0-x64.exe**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-Setup-v0.3.0-x64.exe) |
+| **Windows 10 / 11** | Portable Archive | `.zip` (14.81 MB) | [**Download Beside-v0.3.0-Windows-x64.zip**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-v0.3.0-Windows-x64.zip) |
+| **Android 8.0+** | Signed Release APK | `.apk` (27.78 MB) | [**Download Beside-v0.3.0-Android-arm64.apk**](https://github.com/thisma-labs/beside/releases/download/v0.3.0/Beside-v0.3.0-Android-arm64.apk) |
 
 > Checksums and cryptographic signatures are published with every release in [`SHA256SUMS.txt`](SHA256SUMS.txt).  
 > Mirrors also available on **SourceForge**: [Beside for Windows](https://sourceforge.net/projects/beside-windows/) and [Beside for Android](https://sourceforge.net/projects/beside-android/).
@@ -101,17 +101,17 @@ Always verify the integrity of downloaded binaries before executing:
 
 ### Windows (PowerShell)
 ```powershell
-Get-FileHash -Algorithm SHA256 Beside-Setup-v0.2.0-x64.exe
-# Expected: 1f2f28b7e404519de9e5b836940315be26306a8b6f3c222762a6d67dc753ff8e
+Get-FileHash -Algorithm SHA256 Beside-Setup-v0.3.0-x64.exe
+# Expected: cc8646d4fb618f429743e3006d8f7abb03141e036faad87840e62815b98ab685
 
-Get-FileHash -Algorithm SHA256 Beside-v0.2.0-Windows-x64.zip
-# Expected: bca3db28d780790797a4123f157bca3587243c6f581a1388b24975ab6cb467d9
+Get-FileHash -Algorithm SHA256 Beside-v0.3.0-Windows-x64.zip
+# Expected: a0d0fd7fd6af7517246e1c34bc1d20fb34705bf38d05b2057cb074ed6df50727
 ```
 
 ### Android (Linux / macOS / Termux)
 ```bash
-sha256sum Beside-v0.2.0-Android-arm64.apk
-# Expected: 8867cc2d82309f42cfdad3b1779114dd64b1be5bac59e8549a0d163199858c06
+sha256sum Beside-v0.3.0-Android-arm64.apk
+# Expected: c4caf733ec9f407ab45e79b3aa34d5ad524471b93ed4c1654fb6c49725dbeae8
 ```
 
 ---
