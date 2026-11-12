@@ -77,6 +77,8 @@ Beside is freemium software. Beside Free is completely functional for everyday q
 | **Files per Batch** | 1 file per transfer | **Unlimited** multi-file batches |
 | **Recursive Folder Trees** | Locked | **Preserved relative paths** |
 | **Instant Text & Snippets** | Up to 40 characters | **Unlimited** text & code snippets |
+| **Simultaneous Multi-Send** | 1 recipient at a time | **Simultaneous multi-device fanout** |
+| **Device Groups** | 0 groups (1:1 only) | **Unlimited** custom device groups |
 | **Trusted Paired Peers** | Up to 1 paired device | **Unlimited** trusted devices |
 | **Zero-Click Auto-Accept** | Manual approval only | **Auto-accept from paired peers** |
 | **Custom Save Directory** | Downloads/Beside | **Any folder** (Storage Access Framework) |
